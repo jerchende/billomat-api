@@ -16,15 +16,11 @@ import java.util.List;
 @ToString(callSuper = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonRootName("incomings")
-public class Incomings extends Pageable<Incomings, Incoming> {
+public class Incomings extends Pageable {
 
     @JsonProperty("incoming")
     private List<Incoming> incomings;
 
-    @Override
-    List<Incoming> extractItems() {
-        return getIncomings();
-    }
 }
 
 

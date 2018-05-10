@@ -2,9 +2,7 @@ package net.erchen.billomat.api.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.List;
-
-abstract class Pageable<W, T> {
+abstract class Pageable {
 
     @JsonProperty("@page")
     private int page;
@@ -14,7 +12,5 @@ abstract class Pageable<W, T> {
 
     @JsonProperty("@total")
     private int total;
-
-    abstract List<T> extractItems();
 
 }
